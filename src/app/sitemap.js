@@ -1,6 +1,6 @@
 // /src/app/sitemap.js
 
-import { SEO_CONFIG } from "@/lib/seo-config";
+import { SEO_CONFIG } from "../lib/seo-config";
 
 export default async function sitemap() {
   const baseUrl = SEO_CONFIG.siteUrl.replace(/\/$/, "");
