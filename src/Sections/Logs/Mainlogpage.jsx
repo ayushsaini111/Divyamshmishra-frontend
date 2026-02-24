@@ -21,7 +21,7 @@ const NAVBAR_OFFSET = 96;
      ====================== */
   useEffect(() => {
     const fetchLogs = async () => {
-      const res = await fetch("http://localhost:3001/api/journeyLogs", { cache: "no-store" });
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/journeyLogs`, { cache: "no-store" });
       const json = await res.json();
       setJourneyLogs(Array.isArray(json) ? json : []);
     };
@@ -29,7 +29,7 @@ const NAVBAR_OFFSET = 96;
     const fetchPerformance = async () => {
       try {
         setPerformanceLoading(true);
-        const res = await fetch("http://localhost:3001/api/performanceTrack", {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/performanceTrack`, {
           cache: "no-store",
         });
         if (!res.ok) return;

@@ -40,7 +40,7 @@ useEffect(() => {
   useEffect(() => {
     const fetchLatestLog = async () => {
       try {
-        const res = await fetch("http://localhost:3001/api/journeyLogs", {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/journeyLogs`, {
           cache: "no-store",
         })
         const data = await res.json()

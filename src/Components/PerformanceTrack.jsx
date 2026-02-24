@@ -10,7 +10,7 @@ useEffect(() => {
 }, [data]);
     useEffect(() => {
         const fetchPerformance = async () => {
-            const res = await fetch("http://localhost:3001/api/performanceTrack");
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/performanceTrack`);
 
             console.log(res);
             if (!res.ok) return;
