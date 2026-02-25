@@ -36,7 +36,7 @@ function BestAndWorst() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-[100px] md:py-s160 px-s32  overflow-hidden space-y-s104"
+      className="relative py-s80 md:py-s160 px-s32  overflow-hidden space-y-s104"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
@@ -75,7 +75,7 @@ function BestAndWorst() {
           text={bestAndWorst.best}
           className={`
             transition-transform duration-1700 ease-out
-            ${isVisible ? "-translate-y-80" : "translate-y-0"}
+            ${isVisible ? "-translate-y-60" : "translate-y-0"}
           `}
         />
       </div>

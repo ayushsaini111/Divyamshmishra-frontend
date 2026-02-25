@@ -259,6 +259,8 @@ function TradingRules() {
       {/* Bottom Statement (Transition Section) */}
       <div
         ref={endRef}
+          data-nav="white" 
+
         className="relative h-screen flex justify-center items-center border-t-[12px] lg:border-t-[40px] border-primary-main bg-white overflow-hidden"
       >
         {/* Expanding Black Circle */}

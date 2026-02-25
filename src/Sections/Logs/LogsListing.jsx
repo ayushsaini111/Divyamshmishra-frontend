@@ -24,8 +24,8 @@ export default function LogsListingPage({
     try {
       const res = await fetch(
         query
-          ? `http://localhost:3001/api/journeyLogs?q=${encodeURIComponent(query)}`
-          : "http://localhost:3001/api/journeyLogs",
+          ? `${process.env.NEXT_PUBLIC_BASE_URL}/api/journeyLogs?q=${encodeURIComponent(query)}`
+          : `${process.env.NEXT_PUBLIC_BASE_URL}/api/journeyLogs`,
         { cache: "no-store" }
       );
 

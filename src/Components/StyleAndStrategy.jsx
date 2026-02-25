@@ -16,7 +16,7 @@ function StyleAndStrategy() {
 
   const { strategyData } = homePage;
   return (
-    <section className="space-y-s56 md:space-y-s104 px-s32 py-s80 md:py-s160">
+    <section className="space-y-s56 md:space-y-s104 px-s32 py-s104 md:py-s160">
       <h2
         ref={StyleAndStrategy1.ref}
         className="heading-h2 animate-ytop-fadein "

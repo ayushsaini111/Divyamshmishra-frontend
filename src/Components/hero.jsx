@@ -208,12 +208,12 @@ function Hero() {
 
         {/* BIG NAME */}
         <div className="absolute bottom-0 md:left-1/2 
-                        -translate-x-46 -translate-y-40 
+                        -translate-x-52 -translate-y-40 
                         md:translate-y-20 md:-translate-x-1/2 
                         z-10">
           <div
             ref={nameRef}
-            className="text-[180px] lg:text-[350px] 
+            className="text-[180px] sm:text-[242px] lg:text-[350px] 
                        rotate-90 md:rotate-0 
                        text-secondary font-secondary 
                        whitespace-nowrap"
@@ -271,7 +271,7 @@ function Hero() {
       </section>
 
       <div className="block md:hidden absolute bottom-0 
-                      translate-y-20 z-50  px-s16 heading-h3">
+                      -translate-y-4 z-50  px-s56 heading-h3">
         <p>{homePage.home.right}</p>
         <p className="caption max-w-[250px]">
           Discipline. Risk control. Sustained long-term <span className="text-primary-main">long-term</span> consistency. 

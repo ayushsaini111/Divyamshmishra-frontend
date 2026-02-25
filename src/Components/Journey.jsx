@@ -60,7 +60,7 @@ useEffect(() => {
   if (!latestLog) return null
 
   return (
-    <section className="px-s32 lg:px-0 py-s104 md:py-s160 space-y-s104">
+    <section className="px-s32 lg:px-0  md:py-s160 space-y-s104">
       {/* Heading */}
       <div>
         <h2 className="heading-h2 inline-block bg-linear-to-br from-foreground to-primary-main bg-clip-text text-transparent">

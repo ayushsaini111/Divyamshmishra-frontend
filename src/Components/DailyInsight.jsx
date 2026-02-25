@@ -36,7 +36,7 @@ function DailyInsights() {
   console.log("SDfs", insights);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/dailyBlogs")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/dailyBlogs`)
       .then((res) => res.json())
       .then((data) => {
         setInsights(data);
