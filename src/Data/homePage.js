@@ -34,19 +34,19 @@ export const homePage = {
                 id: 1,
                 description:
                     "Disciplined diversification across asset classes with a focus on risk control and long-term market participation.",
-                icon: "/Images/Sample.png"
+                icon: "/Images/col1.jpg"
             },
             {
                 id: 2,
                 description:
                     "Focusing on companies with strong potential for future earnings and sustainable revenue growth over time.",
-                icon: "/Images/Sample.png"
+                icon: "/Images/col2.jpg"
             },
             {
                 id: 3,
                 description:
                     "Preference for sectors with structural growth opportunities, including technology and evolving industries.",
-                icon: "/Images/Sample.png"
+                icon: "/Images/col3.jpg"
             }
         ]
     },

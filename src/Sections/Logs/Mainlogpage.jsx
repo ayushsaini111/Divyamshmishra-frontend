@@ -29,7 +29,7 @@ const NAVBAR_OFFSET = 96;
     const fetchPerformance = async () => {
       try {
         setPerformanceLoading(true);
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/performanceTrack`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/performanceTrack`, {
           cache: "no-store",
         });
         if (!res.ok) return;

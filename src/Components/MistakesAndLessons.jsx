@@ -34,7 +34,7 @@ function MistakesAndLessons() {
         {/* Top Row */}
         <div className="grid md:grid-cols-2  gap-s32 md:gap-16 items-center mb-s64 ">
           {/* Image */}
-          <MALCard src="/Images/Sample.png" alt="Trading mistake chart" />
+          <MALCard src="/Images/red-video.mp4" alt="Trading mistake chart" />
 
           {/* Text */}
           <p
@@ -57,7 +57,7 @@ function MistakesAndLessons() {
 
           {/* Image */}
           <MALCard
-            src="/Images/Sample.png"
+            src="/Images/green-vedio.mp4"
             alt="Trading lesson chart"
             className="md:order-2 order-1 animate-z-fadein"
           />

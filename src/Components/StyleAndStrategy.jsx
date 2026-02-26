@@ -30,7 +30,7 @@ function StyleAndStrategy() {
           className="relative w-full  aspect-4/3 overflow-hidden rounded-r40 animate-xtoleft-fadein"
         >
           <Image
-            src="/Images/Sample.png"
+            src="/Images/market.png"
             alt="Market visual"
             fill
             className="object-cover"

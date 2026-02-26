@@ -11,6 +11,7 @@ function PerformanceTrack() {
     useEffect(() => {
         const fetchPerformance = async () => {
             const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/performanceTrack`);
+            
 
             console.log(res);
             if (!res.ok) return;
@@ -26,7 +27,7 @@ function PerformanceTrack() {
 
     if (!data) return null;
     return (
-        <section className="w-full pt-s160  md:py-s160 space-y-s56 md:space-y-s104 px-s32 lg:px-0">
+        <section className="w-full pt-s80   md:py-s160 md:space-y-s56 xl:space-y-s104 px-s32 xl:px-0">
 
             {/* Heading */}
             <h2 className="heading-h2">
@@ -34,10 +35,10 @@ function PerformanceTrack() {
             </h2>
 
             {/* Layout */}
-            <div className="flex flex-col xl:flex-row items-center justify-around  ">
+            <div className=" flex flex-col xl:flex-row items-center justify-around md:gap-s32 ">
 
                 {/* Left Text */}
-                <p className="body-default w-[200px] text-justify">
+                <p className="body-default w-[200px] text-justify translate-y-15 md:translate-y-0">
                     {data && `I have executed a total of ${data.totalTrades} trades in my trading career, with an overall accuracy of ${data.accuracy}%.`}
                 </p>
 
@@ -109,7 +110,7 @@ function PerformanceTrack() {
                 </div>
 
                 {/* Right Text */}
-                <p className="body-default w-[200px] text-justify">
+                <p className="body-default w-[200px] text-justify -translate-y-15 md:translate-y-0">
                     {data && `I have maintained an average risk-to-reward of ${data.avgRiskToReward} across trades, with my best trade at ${data.best} and my largest loss limited to ${data.worst}.`}
                 </p>
 

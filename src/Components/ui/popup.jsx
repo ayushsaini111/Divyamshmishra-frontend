@@ -81,7 +81,7 @@ export default function JourneyLogModal({ log, onClose }) {
       <div
         onClick={(e) => e.stopPropagation()}
         className={`
-          bg-background rounded-r32 translate-y-30 md:translate-y-30
+          bg-background rounded-r32 translate-y-30 md:translate-y-100 xl:translate-y-30
           w-full max-w-5xl
           relative
           ${isClosing ? "animate-slideDown" : "animate-slideUp"}
@@ -130,7 +130,7 @@ export default function JourneyLogModal({ log, onClose }) {
             <div className="max-w-[300px] mx-auto flex flex-col items-center space-y-s16 py-s32">
               <p className="caption text-secondary">{date}</p>
 
-              <p className="body-large text-center max-w-[300px] break-words">
+              <p className="body-large text-center max-w-[270px] break-words">
                 {log.description}
               </p>
             </div>

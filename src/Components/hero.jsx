@@ -213,7 +213,7 @@ function Hero() {
                         z-10">
           <div
             ref={nameRef}
-            className="text-[180px] sm:text-[242px] lg:text-[350px] 
+            className="text-[180px] sm:text-[242px] md:text-[300px] xl:text-[350px] 
                        rotate-90 md:rotate-0 
                        text-secondary font-secondary 
                        whitespace-nowrap"

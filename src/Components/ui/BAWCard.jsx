@@ -17,7 +17,7 @@ function BAWCard({ type,className ,text}) {
 
             <div className="relative z-10 w-full aspect-3/4 overflow-hidden border border-white/30 rounded-r16 md:rounded-r32">
                 <Image
-                    src={isBest ? '/Images/Sample.png' : '/Images/Sample.png'}
+                    src={isBest ? '/Images/best.jpg' : '/Images/worst.jpg'}
                     alt="trade visual"
                     fill
                     className="object-cover"

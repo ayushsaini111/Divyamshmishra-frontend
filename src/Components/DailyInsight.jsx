@@ -47,9 +47,9 @@ function DailyInsights() {
   return (
     <section
       data-nav="white"
-      className="py-s80   md:py-s160 flex justify-center items-center bg-black px-s16 ms:px-s32 "
+      className="py-s80   md:py-s160 flex justify-center items-center bg-black px-s16 md:px-s32 "
     >
-      <div className="space-y-s160">
+      <div className="space-y-s80 md:space-y-s160">
         {/* Content */}
         <div className="max-w-7xl mx-auto text-center">
           {/* Heading glass plate */}

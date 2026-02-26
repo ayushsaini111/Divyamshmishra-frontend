@@ -94,7 +94,7 @@ Because noise fades — cycles repeat.
 
             <div className="w-full md:w-1/2 flex justify-center md:justify-end">
               <Image
-                src="/Images/img1.png"
+                src="/Images/about2.png"
                 alt="About me image"
                 width={700}
                 height={400}
@@ -114,7 +114,7 @@ Because noise fades — cycles repeat.
           <div className=" mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-16">
             <div className="w-full md:w-1/2 flex justify-center md:justify-start order-2 md:order-1">
               <Image
-                src="/Images/img1.png"
+                src="/Images/about3.png"
                 alt="About me image"
                 width={700}
                 height={400}
@@ -151,7 +151,7 @@ not those who react late to it.
 
             <div className="w-full md:w-1/2 flex justify-center md:justify-end">
               <Image
-                src="/Images/img1.png"
+                src="/Images/about4.png"
                 alt="About me image"
                 width={700}
                 height={400}
@@ -170,7 +170,7 @@ not those who react late to it.
           <div className=" mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-16">
             <div className="w-full md:w-1/2 flex justify-center md:justify-start order-2 md:order-1">
               <Image
-                src="/Images/img1.png"
+                src="/Images/about1.png"
                 alt="About me image"
                 width={700}
                 height={400}

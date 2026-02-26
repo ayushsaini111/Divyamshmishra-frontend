@@ -15,7 +15,7 @@ export default function JourneyLogCardUI({ log, onView }) {
       />
 
       <div className="flex flex-col justify-between flex-1 gap-s16">
-        <div className="md:max-w-[30vw] flex flex-col">
+        <div className="md:max-w-[30vw]  flex flex-col">
           <p className="body-default line-clamp-3 break-words">
             {log.description}
           </p>

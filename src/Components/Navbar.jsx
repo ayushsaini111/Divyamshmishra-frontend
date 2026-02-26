@@ -67,7 +67,7 @@ export default function Navbar() {
     return (
 
         <nav
-            className={` fixed top-8 left-s16 right-s16 max-w-7xl mx-auto rounded-full
+            className={` fixed top-5 md:top-8 left-s16 right-s16 max-w-7xl mx-auto rounded-full
                    z-500 
                         flex justify-between items-center
                         px-s16 
