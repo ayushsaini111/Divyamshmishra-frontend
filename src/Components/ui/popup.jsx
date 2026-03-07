@@ -103,7 +103,7 @@ export default function JourneyLogModal({ log, onClose }) {
               h-[56px]
               w-full max-w-xs md:max-w-3xl
               bg-background
-              rounded-t-r16
+              rounded-t-r32
             ">
               <button
                 onClick={handleClose}

@@ -7,7 +7,7 @@ const AnimatedIcon = ({ isOpen,onClick}) => {
     onClick={onClick}
       aria-label="Toggle menu"
       aria-expanded={isOpen}
-     className="relative flex z-700 items-center gap-1 w-12 h-6 py-s24">
+     className="relative flex z-700 items-center gap-1 w-8 h-6 py-s24">
       {/* LEFT candle */}
       <Image
         src={"/Images/red.png"}

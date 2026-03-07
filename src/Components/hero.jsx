@@ -261,7 +261,7 @@ function Hero() {
           </div>
 
           {/* MOBILE LEFT */}
-          <div className="block md:hidden absolute right-5 heading-h3">
+          <div className="block md:hidden absolute  right-5 heading-h3">
             <p>{homePage.home.left}</p>
             <p className="caption text-primary-main">
               {homePage.home.leftSubheading}

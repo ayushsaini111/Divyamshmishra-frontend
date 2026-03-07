@@ -34,7 +34,7 @@ function MistakesAndLessons() {
         {/* Top Row */}
         <div className="grid md:grid-cols-2  gap-s32 md:gap-16 items-center mb-s64 ">
           {/* Image */}
-          <MALCard src="/Images/red-video.mp4" alt="Trading mistake chart" />
+          <MALCard src="/Images/red.mp4" className2="scale-y-[-1] scale-115" alt="Trading mistake chart" />
 
           {/* Text */}
           <p

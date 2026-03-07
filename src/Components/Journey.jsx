@@ -60,16 +60,15 @@ useEffect(() => {
   if (!latestLog) return null
 
   return (
-    <section className="px-s32 xl:px-0  md:py-s160 space-y-s104">
+    <section className="px-s32 xl:px-0  md:py-s160 space-y-s64 md:space-y-s160">
       {/* Heading */}
       <div>
         <h2 className="heading-h2 inline-block bg-linear-to-br from-foreground to-primary-main bg-clip-text text-transparent">
           My Journey Logs
         </h2>
 
-        <p className="body-large pt-s24">
-          Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry.
+        <p className="body-large max-w-2xl pt-s24">
+          This section documents my trading journey through real trades, insights, and lessons, forming a continuous record of growth, discipline, and improvement.
         </p>
       </div>
 

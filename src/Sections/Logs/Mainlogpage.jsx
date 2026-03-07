@@ -70,8 +70,8 @@ const NAVBAR_OFFSET = 96;
   return (
     <section className="space-y-[160px] md:space-y-[200px]">
 
-    <div className="max-w-7xl mx-auto px-s16 pb-s80 md:pb-s160 space-y-s104">
-      <h1 className="heading-h2 pt-s160 text-center">
+    <div className="max-w-7xl mx-auto px-s16 pb-s80 md:pb-s160 space-y-s80 md:space-y-s104">
+      <h1 className="heading-h2 pt-s104  md:pt-s160 text-center">
         My Trading Journey
       </h1>
 
