@@ -54,7 +54,7 @@ export default function JourneyLogModal({ log, onClose }) {
     setMounted(true)
 
     if (log?.createdAt) {
-      setDate(new Date(log.createdAt).toLocaleDateString())
+      setDate(new Date(log.createdAt).toLocaleDateString("en-IN"))
     }
   }, [log])
 
@@ -93,7 +93,7 @@ export default function JourneyLogModal({ log, onClose }) {
         {/* Content */}
         <div className="overflow-y-auto px-s24 py-s64 md:px-s56">
 
-          <div className="flex flex-col lg:flex-row items-center gap-s48">
+          <div className="flex flex-col lg:flex-row items-center gap-s32">
 
             {/* Fixed close bar */}
             <div className="
@@ -130,7 +130,7 @@ export default function JourneyLogModal({ log, onClose }) {
             <div className="max-w-[300px] mx-auto flex flex-col items-center space-y-s16 py-s32">
               <p className="caption text-secondary">{date}</p>
 
-              <p className="body-large text-center max-w-[270px] break-words">
+              <p className="body-large text-center max-w-[270px] md:max-w-xl break-words">
                 {log.description}
               </p>
             </div>

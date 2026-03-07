@@ -148,7 +148,7 @@ export default function SearchBar({
     <div className="relative w-full flex justify-center border-2 border-primary-light bg-secondary-main rounded-r40 ">
       <div className="relative w-full max-w-7xl">
         {/* INPUT */}
-        <div className="flex items-center gap-s16   px-s16 py-s8 min-w-0">
+        <div className="flex items-center gap-s16  px-s8 md:px-s16 py-s8 min-w-0">
           <input
             ref={inputRef}
             type="search"

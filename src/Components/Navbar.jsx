@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -12,6 +12,30 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isWhiteNav, setIsWhiteNav] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuRef = useRef(null);
+
+  /* CLOSE MENU WHEN CLICKING OUTSIDE */
+  useEffect(() => {
+
+    const handleClickOutside = (event) => {
+
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () =>
+      document.removeEventListener("mousedown", handleClickOutside);
+
+  }, []);
+
 
   /* NAV COLOR CHANGE ON SCROLL */
   useEffect(() => {
@@ -36,7 +60,6 @@ export default function Navbar() {
     };
 
     handleScroll();
-
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -47,27 +70,25 @@ export default function Navbar() {
   /* LOCK BODY SCROLL WHEN MOBILE MENU OPEN */
   useEffect(() => {
 
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
+    if (isMenuOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
 
   }, [isMenuOpen]);
 
-useEffect(() => {
-  if ("scrollRestoration" in window.history) {
-    window.history.scrollRestoration = "manual";
-  }
 
-  window.scrollTo(0, 0);
-}, [pathname]);
+  /* FORCE PAGE START FROM TOP */
+  useEffect(() => {
+
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo(0, 0);
+
+  }, [pathname]);
+
+
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
-  const closeMenu = () => setIsMenuOpen(false);
 
 
   return (
@@ -80,14 +101,15 @@ useEffect(() => {
     >
 
       {/* LOGO */}
-      <Link href="/" className="shrink-0">
+      <Link href="/" className="shrink-0"
+      onClick={() => window.reload()}
+      >
 
         <Image
           src={isWhiteNav ? "/Images/footer.png" : "/logo.png"}
           alt="Logo"
           width={40}
           height={40}
-          onClick={()=>{window.location.reload()}}
         />
 
       </Link>
@@ -106,10 +128,10 @@ useEffect(() => {
 
               <Link
                 href={item.href}
-                  onClick={(e) => {
-    e.preventDefault();
-    window.location.href = item.href;
-  }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = item.href;
+                }}
                 className={`relative p-s6 transition-colors duration-300
                 ${
                   isActive
@@ -148,7 +170,6 @@ useEffect(() => {
           </Button>
         </div>
 
-
         {/* MOBILE TOGGLE */}
         <div className="block sm:hidden">
           <AnimatedGavelIcon
@@ -161,20 +182,10 @@ useEffect(() => {
       </div>
 
 
-      {/* OVERLAY */}
-      {isMenuOpen && (
-
-        <div
-          className="fixed inset-0 md:hidden z-40"
-          onClick={closeMenu}
-        />
-
-      )}
-
-
       {/* MOBILE MENU */}
       <div
-        className={`absolute top-full left-1/2 -translate-x-1/2 w-full
+        ref={menuRef}
+        className={`absolute z-50 top-full left-1/2 -translate-x-1/2 w-full
         bg-secondary-main mt-5 max-w-xs text-main text-center overflow-hidden
         transition-all duration-300 ease-in-out xl:hidden rounded-r16 shadow-lg
         ${isMenuOpen ? "max-h-[85vh] py-s8" : "max-h-0 py-0"}`}
@@ -192,11 +203,11 @@ useEffect(() => {
 
                 <Link
                   href={href}
-                    onClick={(e) => {
-    e.preventDefault();
-    closeMenu();
-    window.location.href = href;
-  }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMenuOpen(false);
+                    window.location.href = href;
+                  }}
                   className={`block px-s16 py-s8 rounded-full transition
                   ${
                     isActive
@@ -216,8 +227,8 @@ useEffect(() => {
           })}
 
 
-          {/* MOBILE CONNECT BUTTON */}
-          <div onClick={closeMenu} className="mx-s16 my-s8">
+          {/* CONNECT BUTTON */}
+          <div className="mx-s16 my-s8">
 
             <Button
               variant="secondary"
@@ -239,9 +250,6 @@ useEffect(() => {
   );
 
 }
-
-
-
 
 
 
