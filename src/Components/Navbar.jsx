@@ -8,7 +8,7 @@ import Button from "./ui/Button";
 import AnimatedGavelIcon from "./ui/AnimatedGavelIcon";
 
 export default function Navbar() {
-
+const iconRef = useRef(null);
   const pathname = usePathname();
   const [isWhiteNav, setIsWhiteNav] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,25 +16,24 @@ export default function Navbar() {
   const menuRef = useRef(null);
 
   /* CLOSE MENU WHEN CLICKING OUTSIDE */
-  useEffect(() => {
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target) &&
+      iconRef.current &&
+      !iconRef.current.contains(event.target)
+    ) {
+      setIsMenuOpen(false);
+    }
+  };
 
-    const handleClickOutside = (event) => {
+  document.addEventListener("mousedown", handleClickOutside);
 
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target)
-      ) {
-        setIsMenuOpen(false);
-      }
-
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () =>
-      document.removeEventListener("mousedown", handleClickOutside);
-
-  }, []);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
 
 
   /* NAV COLOR CHANGE ON SCROLL */
@@ -171,13 +170,13 @@ export default function Navbar() {
         </div>
 
         {/* MOBILE TOGGLE */}
-        <div className="block sm:hidden">
-          <AnimatedGavelIcon
-            isOpen={isMenuOpen}
-            onClick={toggleMenu}
-            variant="yt"
-          />
-        </div>
+    <div ref={iconRef} className="block sm:hidden">
+  <AnimatedGavelIcon
+    isOpen={isMenuOpen}
+    onClick={toggleMenu}
+    variant="yt"
+  />
+</div>
 
       </div>
 
@@ -230,15 +229,18 @@ export default function Navbar() {
           {/* CONNECT BUTTON */}
           <div className="mx-s16 my-s8">
 
-            <Button
-              variant="secondary"
-              as="link"
-              href="/connect"
-              className="block"
-            >
-              Connect with me
-            </Button>
-
+          <Button
+  variant="secondary"
+  as="link"
+  href="/connect"
+  onClick={() => {
+    setIsMenuOpen(false);
+    window.location.href = "/connect";
+  }}
+  className="block"
+>
+  Connect with me
+</Button>
           </div>
 
         </div>
